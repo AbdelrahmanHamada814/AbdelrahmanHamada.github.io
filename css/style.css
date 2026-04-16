@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     margin:0;
     min-height: 100vh;
@@ -7,15 +13,16 @@ body{
     flex-direction: column;
     min-height: 100vh;
     background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
-    url("../Media/background.jpg");
+    url("../Media/background image.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header{
-    background:rgba(12, 90, 244 ,0.7);
-    padding:10px;
+    background:rgba(12, 90, 224, 0.8);
+    padding:20px;
     text-align:center;
 }
 
@@ -27,30 +34,34 @@ nav{
 
 nav a{
     color:white;
-    margin:10px;
+    margin:0 15px;
     text-decoration:none;
     font-weight:bold;
 }
 
 nav a:hover{
-    color:rgb(0, 255, 255);
+    color:rgb(0, 86, 179);
 }
 
 main{
     flex: 1;
     padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about{
-    border: 3px;
+    border: 2px solid aqua;
     border-color: aqua;
     background-color: rgba(17, 40, 170, 0.6);
     border:2px solid ;
     padding:20px;
-    margin:20px;
+    margin:20px 0;
     border-radius:10px;
     text-align:center;
     width: 90%;
+    max-width: 800px;
 }
 
 .about h2 {
@@ -58,6 +69,7 @@ main{
 }
 
 .about ul{
+    list-style: position inside;
     margin-bottom: 15px;
     text-align: left;
 }
@@ -66,17 +78,19 @@ footer {
     background-color: rgb(39, 100, 192);
     color: white;
     text-align: center;
-    padding: 20px 10px;
+    padding: 40px 20px;
     margin-top: 60px;
 }
+
 footer p {
     margin: 5px 0;
 }
+
 table{
     width:100%;
     border-collapse:collapse;
     margin-top:20px;
-    background:rgba(17, 40, 170, 0.8);
+    background:rgba(17, 40, 170, 0.6);
 }
 
 th, td{
@@ -87,12 +101,13 @@ th, td{
 
 th{
     background:rgb(255, 255, 255);
-    color:#000;
+    color:black;
 }
 
 tr:hover{
     background:rgb(174, 174, 164);
 }
+
 .form-section{
     max-width:500px;
     margin:30px auto;
@@ -116,6 +131,7 @@ input, textarea{
     border:none;
     border-radius:5px;
     outline:none;
+    margin-bottom: 15px;
 }
 
 button{
@@ -126,11 +142,13 @@ button{
     border-radius:5px;
     font-weight:bold;
     cursor:pointer;
+    transition: 0,3s;
 }
 
 button:hover{
-    background:rgb(174, 174, 164);
+    background:rgb(255, 255, 255);
 }
+
 .contact-box{
     max-width:700px;
     margin:50px auto;
@@ -141,14 +159,13 @@ button:hover{
     border:2px solid rgb(39, 100, 192);
 }
 
-
 .contact-box p{
     margin:10px 0;
     font-size:18px;
 }
 
 @media (max-width: 768px) {
-    
+
     .about, 
     .form-section, 
     .contact-box {
@@ -172,6 +189,7 @@ button:hover{
         overflow-x: auto;
         white-space: nowrap;
     }
+}
 
 *{
     box-sizing: border-box;
