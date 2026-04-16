@@ -15,7 +15,7 @@ body{
 
 header{
     background:rgba(12, 90, 244 ,0.7);
-    padding:20px;
+    padding:10px;
     text-align:center;
 }
 
@@ -33,7 +33,7 @@ nav a{
 }
 
 nav a:hover{
-    color:rgb(200, 9, 9);
+    color:rgb(0, 255, 255);
 }
 
 main{
@@ -65,8 +65,8 @@ main{
 footer {
     background-color: rgb(39, 100, 192);
     color: white;
-    text-align: left;
-    padding: 40px 20px;
+    text-align: center;
+    padding: 20px 10px;
     margin-top: 60px;
 }
 footer p {
@@ -121,7 +121,7 @@ input, textarea{
 button{
     margin-top:15px;
     padding:10px;
-    background:rgb(0, 255, 204);
+    background:rgb(76, 110, 245);
     border:none;
     border-radius:5px;
     font-weight:bold;
@@ -132,41 +132,47 @@ button:hover{
     background:rgb(174, 174, 164);
 }
 .contact-box{
-    max-width:500px;
+    max-width:700px;
     margin:50px auto;
     background:rgba(17, 40, 170, 0.6);
     padding:25px;
     border-radius:10px;
     text-align:center;
-    border:2px solid #00ffcc;
+    border:2px solid rgb(39, 100, 192);
 }
+
 
 .contact-box p{
     margin:10px 0;
     font-size:18px;
 }
 
-@media(max-width:768px){
-
-    body{
-        overflow-x: hidden;
+@media (max-width: 768px) {
+    
+    .about, 
+    .form-section, 
+    .contact-box {
+        width: 95%; 
+        margin: 10px auto; 
+        max-width: none;
     }
 
-    table{
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    table {
         display: block;
         overflow-x: auto;
+        white-space: nowrap;
     }
 
-    img{
-        max-width: 100%;
-        height: auto;
-    }
-
-    .about
-    .form-section
-    .contact-box{
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-    
+*{
+    box-sizing: border-box;
 }
